@@ -5,11 +5,13 @@ import "nextra-theme-docs/style.css";
 import "./globals.css";
 
 export const metadata = {
-  metadataBase: new URL("https://nextra.site"),
+  metadataBase: new URL("https://docs-kit.khuong.dev"),
   title: {
+    default: "Project Docs Kit - Documentation",
     template: "%s - Project Docs Kit",
   },
-  description: "Project Docs Kit: The best way to build a Project Documentation",
+  description:
+    "Project Docs Kit: The best way to build a Project Documentation",
   applicationName: "Project Docs Kit",
   generator: "Next.js",
   appleWebApp: {
