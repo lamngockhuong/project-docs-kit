@@ -1,0 +1,19 @@
+# Analytics Service
+
+Instructions for integrating the analytics provider.
+
+## Setup
+1. Install the SDK:
+   ```bash
+   pnpm add analytics-service
+   ```
+2. Set the `ANALYTICS_API_KEY` environment variable.
+
+## Usage Example
+```ts
+import { AnalyticsSDK } from 'analytics-service';
+
+export const analyticsClient = new AnalyticsSDK({
+  apiKey: process.env.ANALYTICS_API_KEY,
+});
+```

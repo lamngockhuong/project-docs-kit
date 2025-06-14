@@ -1,0 +1,19 @@
+# Payment Service
+
+This guide shows how to integrate the payment provider.
+
+## Setup
+1. Install the SDK:
+   ```bash
+   pnpm add payment-service
+   ```
+2. Create required environment variables, e.g. `PAYMENT_API_KEY`.
+
+## Usage Example
+```ts
+import { PaymentSDK } from 'payment-service';
+
+export const paymentClient = new PaymentSDK({
+  apiKey: process.env.PAYMENT_API_KEY,
+});
+```
