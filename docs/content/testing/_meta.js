@@ -1,3 +1,4 @@
 export default {
-  "api-tests": "API Tests",
+  'unit-testing': 'Unit Testing',
+  'api-tests': 'API Tests',
 };
