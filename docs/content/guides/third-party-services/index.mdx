@@ -1,0 +1,33 @@
+# Third-Party Services Integration
+
+This section explains how to work with external providers such as payment gateways, analytics platforms or authentication services. Each provider has its own guide so you can keep credentials and setup steps isolated.
+
+## Selecting a Service
+- Evaluate the reliability and pricing of the provider.
+- Confirm compatibility with your tech stack.
+
+## Installation and Setup
+1. Install the provider's SDK or library.
+2. Configure required environment variables and credentials.
+3. Follow the provider's documentation for any initial setup.
+
+## Working with Multiple Providers
+When you rely on more than one service, create a separate module for each provider and keep configuration isolated. Wrapper classes can expose a unified interface to the rest of your codebase.
+
+```ts
+import { PaymentSDK } from 'payment-service';
+import { AnalyticsSDK } from 'analytics-service';
+
+export const paymentClient = new PaymentSDK({
+  apiKey: process.env.PAYMENT_API_KEY,
+});
+
+export const analyticsClient = new AnalyticsSDK({
+  apiKey: process.env.ANALYTICS_API_KEY,
+});
+```
+
+## Best Practices
+- Securely store API keys and secrets in environment variables.
+- Keep third-party dependencies updated.
+- Handle errors gracefully and provide fallbacks.
