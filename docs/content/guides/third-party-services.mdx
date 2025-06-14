@@ -20,6 +20,26 @@ const client = new ExampleSDK({ apiKey: process.env.EXAMPLE_API_KEY });
 client.doSomething();
 ```
 
+## Integrating Multiple Services
+
+When your project relies on more than one provider, isolate each integration in
+its own module or service. Keep credentials and configuration for each provider
+separate to avoid conflicts. A common pattern is to create wrapper classes that
+expose a unified interface to the rest of your codebase.
+
+```ts
+import { ExampleSDK } from 'example-service';
+import { AnalyticsSDK } from 'analytics-service';
+
+export const paymentClient = new ExampleSDK({
+  apiKey: process.env.EXAMPLE_API_KEY,
+});
+
+export const analyticsClient = new AnalyticsSDK({
+  apiKey: process.env.ANALYTICS_API_KEY,
+});
+```
+
 ## Best Practices
 - Securely store API keys and secrets using environment variables.
 - Keep third-party dependencies updated to avoid vulnerabilities.
