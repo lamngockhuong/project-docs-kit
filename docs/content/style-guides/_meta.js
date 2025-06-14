@@ -1,7 +1,7 @@
 export default {
-  "branch-conventions": "",
-  "commit-conventions": "",
-  typescript: "",
-  "naming-cheatsheet": "",
-  "clean-code-typescript": "",
+  "branch-conventions": "Branch Conventions",
+  "commit-conventions": "Commit Conventions",
+  typescript: "TypeScript",
+  "naming-cheatsheet": "Naming Cheatsheet",
+  "clean-code-typescript": "Clean Code TypeScript",
 };
