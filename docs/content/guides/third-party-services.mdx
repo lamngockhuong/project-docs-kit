@@ -1,0 +1,27 @@
+# Third-Party Services Integration
+
+This guide covers how to integrate external services such as payment gateways, analytics platforms or authentication providers.
+
+## Selecting a Service
+- Evaluate the reliability and pricing of the service.
+- Confirm compatibility with the project's tech stack.
+
+## Installation and Setup
+1. Install the provider's SDK or library.
+2. Configure required environment variables and credentials.
+3. Follow the provider's documentation for initial setup steps.
+
+## Example
+```ts
+import { ExampleSDK } from 'example-service';
+
+const client = new ExampleSDK({ apiKey: process.env.EXAMPLE_API_KEY });
+
+client.doSomething();
+```
+
+## Best Practices
+- Securely store API keys and secrets using environment variables.
+- Keep third-party dependencies updated to avoid vulnerabilities.
+- Handle errors gracefully and provide fallback logic when possible.
+
