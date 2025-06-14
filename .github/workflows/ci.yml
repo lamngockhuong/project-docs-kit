@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22.15.0]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        version: 10.12.1
+
+    - name: Setup Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'pnpm'
+        cache-dependency-path: 'docs/pnpm-lock.yaml'
+
+    - name: Install dependencies
+      working-directory: docs
+      run: pnpm install --frozen-lockfile
+
+    - name: Lint
+      working-directory: docs
+      run: pnpm lint
+
+    - name: Build
+      working-directory: docs
+      run: pnpm build
+      env:
+        NODE_ENV: production
