@@ -1,28 +1,28 @@
-import { Footer, Layout, Navbar } from "nextra-theme-docs";
-import { Head } from "nextra/components";
-import { getPageMap } from "nextra/page-map";
-import "nextra-theme-docs/style.css";
-import "./globals.css";
+import { Footer, Layout, Navbar } from 'nextra-theme-docs';
+import 'nextra-theme-docs/style.css';
+import { Head } from 'nextra/components';
+import { getPageMap } from 'nextra/page-map';
+import './globals.css';
 
 export const metadata = {
-  metadataBase: new URL("https://docs-kit.khuong.dev"),
+  metadataBase: new URL('https://docs-kit.khuong.dev'),
   title: {
-    default: "Project Docs Kit - Documentation",
-    template: "%s - Project Docs Kit",
+    default: 'Project Docs Kit - Documentation',
+    template: '%s - Project Docs Kit',
   },
   description:
-    "Project Docs Kit: The best way to build a Project Documentation",
-  applicationName: "Project Docs Kit",
-  generator: "Next.js",
+    'Project Docs Kit: The best way to build a Project Documentation',
+  applicationName: 'Project Docs Kit',
+  generator: 'Next.js',
   appleWebApp: {
-    title: "Project Docs Kit",
+    title: 'Project Docs Kit',
   },
   other: {
-    "msapplication-TileImage": "/ms-icon-144x144.png",
-    "msapplication-TileColor": "#fff",
+    'msapplication-TileImage': '/ms-icon-144x144.png',
+    'msapplication-TileColor': '#fff',
   },
   twitter: {
-    site: "https://docs-kit.khuong.dev",
+    site: 'https://docs-kit.khuong.dev',
   },
 };
 
@@ -35,8 +35,8 @@ export default async function RootLayout({
     <Navbar
       logo={
         <div>
-          <b>Project Docs Kit</b>{" "}
-          <span style={{ opacity: "30%" }}>
+          <b>Project Docs Kit</b>{' '}
+          <span style={{ opacity: '30%' }}>
             The best way to build a Project Documentation
           </span>
         </div>
@@ -56,7 +56,7 @@ export default async function RootLayout({
               <div className="mx-auto px-4 sm:px-6">
                 <div className="text-center">
                   <p>
-                    Built with ❤️ {new Date().getFullYear()} by{" "}
+                    Built with ❤️ {new Date().getFullYear()} by{' '}
                     <a href="https://khuong.dev" target="_blank">
                       Khuong Dev
                     </a>
