@@ -1,12 +1,12 @@
 const meta = {
   index: {
-    type: "page",
-    title: "Home",
-    display: "hidden",
+    type: 'page',
+    title: 'Home',
+    display: 'hidden',
   },
   docs: {
-    type: "page",
-    title: "Documentation",
+    type: 'page',
+    title: 'Documentation',
   },
 };
 
